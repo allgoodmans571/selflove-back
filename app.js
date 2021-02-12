@@ -34,6 +34,9 @@ app.get("/Meditopia", (req, res) => {
 app.get("/webinar18", (req, res) => {
   res.download(__dirname + `/public/webinar18.png`);
 });
+app.get("/BH", (req, res) => {
+  res.download(__dirname + `/public/BH.png`);
+});
 
 app.listen(8080);
 console.log("Server started");
