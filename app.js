@@ -19,14 +19,20 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.post("/social", (req, res) => {
-  const base64 = fs.readFileSync(
-    __dirname + `/public/${req.body.pic}.png`,
-    "base64"
-  );
-  res.status(200);
-  res.send({ image: base64 });
-  //   res.download(__dirname + `/public/${req.body.pic}.png`);
+app.get("/books", (req, res) => {
+  res.download(__dirname + `/public/books.png`);
+});
+app.get("/CROCLMS", (req, res) => {
+  res.download(__dirname + `/public/CROCLMS.png`);
+});
+app.get("/fitmost", (req, res) => {
+  res.download(__dirname + `/public/fitmost.png`);
+});
+app.get("/Meditopia", (req, res) => {
+  res.download(__dirname + `/public/Meditopia.png`);
+});
+app.get("/webinar18", (req, res) => {
+  res.download(__dirname + `/public/webinar18.png`);
 });
 
 app.listen(8080);
